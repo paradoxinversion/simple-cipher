@@ -1,0 +1,20 @@
+﻿<Window x:Class="SimpleCipher.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SimpleCipher"
+        mc:Ignorable="d"
+        Title="Simple Cipher" Height="350" Width="525">
+    <Grid>
+        <TextBox x:Name="cryptoInput" Height="132" Margin="108,10,10,0" TextWrapping="Wrap" Text="Type your message here" VerticalAlignment="Top" TextChanged="cryptoInput_TextChanged" VerticalScrollBarVisibility="Auto"/>
+        <Button x:Name="generateCryptoKeyButton" Content="New Cipher Key" HorizontalAlignment="Left" Margin="7,31,0,0" VerticalAlignment="Top" Width="96" Click="generateCryptoKeyButton_Click"/>
+        <Button x:Name="encodeButton" Content="Encode" Margin="0,147,10,0" VerticalAlignment="Top" Click="encodeButton_Click" HorizontalAlignment="Right" Width="75"/>
+        <Button x:Name="decodeButton" Content="Decode" Margin="0,147,90,0" VerticalAlignment="Top" Click="decodeButton_Click" HorizontalAlignment="Right" Width="75"/>
+        <TextBox x:Name="cryptoOutput" Margin="108,172,10,32" TextWrapping="Wrap" Text="Welcome to Simple Cipher. Once you create or load a Cipher Key, you'll be able to encode or decode a new message using that key by typing it in the text box above." VerticalScrollBarVisibility="Auto"/>
+        <TextBlock x:Name="keyStatusText" HorizontalAlignment="Left" Margin="7,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Red" Width="96" Height="21"><Run Text="No Cipher Key"/><LineBreak/><Run/></TextBlock>
+        <Button x:Name="saveCryptoKeyButton" Content="Save Key" HorizontalAlignment="Left" Margin="7,56,0,0" VerticalAlignment="Top" Width="96" Click="saveCryptoKeyButton_Click"/>
+        <Button x:Name="loadCryptoKeyButton" Content="Load Key" HorizontalAlignment="Left" Margin="7,81,0,0" VerticalAlignment="Top" Width="96" Click="loadCryptoKeyButton_Click"/>
+        <Button x:Name="clipboardButton" Content="Copy to Clipboard" Margin="0,0,10,7" Click="clipboardButton_Click" HorizontalAlignment="Right" Width="108" Height="20" VerticalAlignment="Bottom"/>
+    </Grid>
+</Window>
